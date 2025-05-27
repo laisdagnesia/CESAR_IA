@@ -1,0 +1,7 @@
+INSTALL requirements
+
+/Users/laisdagnesia/1.Projects/cesar/IA/03-streamlit/requirements.txt
+
+RUN
+
+streamlit run app-imoveis.py       
