@@ -16,8 +16,16 @@ st.markdown("""
 Esse dashboard foi criado para prática de ciência de dados pelo grupo formado por Anderlan Siqueira, André Poroca, Bruno Souza, Carlos Nascimento, José Silvio, Hélio Ricardo e Laís Dagnésia para demonstrar a análise de crédito utilizando dados fictícios.""") 
 
 # Carregando dados
-DATA_PATH = "credit_data.csv"
-data = pd.read_csv(DATA_PATH)
+# DATA_PATH = "credit_data.csv"
+# data = pd.read_csv(DATA_PATH)
+
+@st.cache_data
+def load_data():
+    data_url = "https://raw.githubusercontent.com/laisdagnesia/CESAR_IA/refs/heads/main/credit_data.csv"
+    data = pd.read_csv(data_url, encoding="ISO-8859-1")
+    return data
+
+data = load_data()
 
 #Ajustes nos dados
 data = data[data['age'] > 0] 
