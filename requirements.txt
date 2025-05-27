@@ -5,3 +5,5 @@ matplotlib
 seaborn
 streamlit_folium
 autorank
+scikit-learn
+plotly
